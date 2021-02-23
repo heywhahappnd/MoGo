@@ -18,13 +18,19 @@ for (let i = 0; i < sliderItems.length; i++) {
 
 // Accordion // 
 
-const accordionItems = document.getElementsByClassName('accordion__item');
 
-for (let i = 0; i < accordionItems.length; i++) {
-  accordionItems[i].onclick = function() {
-    this.classList.toggle('active');
-  }
-}
+$("[data-collapse]").on('click', function(e) {
+  e.preventDefault();
+
+  let $this = $(this), blockID = $this.data('collapse');
+  
+  
+  
+  $(blockID).slideToggle();
+  $this.toggleClass('active');
+  
+})
+
 
 
 // Slider 

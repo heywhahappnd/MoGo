@@ -452,7 +452,12 @@ hr {
 
 .accordion__item {
     border: 1px solid #e5e5e5;
+    border-bottom: none;
     margin-bottom: 10px;
+}
+
+.accordion__item.active {
+    border-bottom: 1px solid #e5e5e5;
 }
 
 .accordion__item.active
@@ -460,10 +465,7 @@ hr {
     display: block;
 }
 
-.accordion__item.active
-.accordion__header {
-    border-bottom-color:#e5e5e5;
-}
+
 .accordion__item.active
 .accordion__header:after {
     transform: rotate(-45deg);
@@ -471,7 +473,7 @@ hr {
 }
 
 .accordion__header {
-    border-bottom: 1px solid transparent;
+    border-bottom: 1px solid #e5e5e5;
     padding: 15px 20px 15px 60px;
     position: relative;
     cursor: pointer;
@@ -695,4 +697,3 @@ hr {
     font-style: italic;
     font-weight: 300;
 }
-
